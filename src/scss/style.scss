@@ -1,0 +1,596 @@
+// Брейк-поинты
+$pc: 1240px; // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 991.98px; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px; // Телефоны L
+$mobileSmall: 479.98px; // Телефоны S
+
+/* import reset */
+@import "reset.scss";
+/* /import reset */
+
+/* import fonts */
+@import "fonts.scss";
+/* /import fonts */
+
+/* import common */
+@import "common.scss";
+/* /import common */
+
+/* import variables */
+@import "variables.scss";
+/* /import variables */
+
+/* import slick-slider */
+@import "slick.scss";
+/* /import slick-slider */
+
+
+body {
+	font-family: 'Aleo-regular';
+	font-size: 20px;
+	line-height: 24px;
+}
+
+body._lock {
+	overflow: hidden;
+}
+
+/* import header */
+@import "header.scss";
+/* /import header */
+
+
+.main {
+  &__preview {
+		margin-bottom: 80px;
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+/* =====================preview========== */
+.preview {
+	margin-top: -119px;
+	background-image: url(img/header_background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+  &__container {
+		padding-bottom: 255px;
+		@media (max-width: $mobile) {
+			background-image: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+			padding-bottom: 59px;
+		}
+	}
+  &__content {
+		max-width: 892px;
+		color: $white;
+		padding-top: 151px;
+		@media (max-width: $mobile) {
+			padding-top: 143px;
+		}
+	}
+  &__title {
+		margin-bottom: 32px;
+	}
+  &__text {
+		font-family: 'Aleo-bold-italic';
+		font-size: 20px;
+		font-style: italic;
+		font-weight: 700;
+		line-height: 24px;
+		margin-bottom: 46px;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+		}
+  &__form {}
+}
+.form-preview {
+	min-height: 95px;
+	padding: 18px 18px 18px 41px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 16px;
+	transition: background-color ease .3s;
+	@media (max-width: $mobile) {
+		min-height: 48px;
+		padding: 9px 9px 9px 16.55px;
+	}
+  &__input {
+		min-width: 65.43%;
+		background-color: transparent;
+		color: $orange;
+		font-family: 'Aleo-regular-italic';
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		transition: background-color ease-in .3s;
+		@media (max-width: $mobile) {
+			font-size: 14px;
+			line-height: 16.8px;
+		}
+		&::placeholder {
+			color: inherit;
+			font: inherit;
+		}
+		&:focus::placeholder {
+			color: transparent;
+		}
+	}
+  &__button {
+		padding: 13.5px 32.5px;
+		
+		transition: background-color ease .3s;
+		@media (max-width: $mobile) {
+			padding: 7.5px 9px;
+		}
+    &:hover {
+      background-color: $orange7;
+    }
+	}
+}
+
+/* =====================/preview========== */
+
+/* =====================steps========== */
+
+.main {
+  &__steps {
+	margin-bottom: 98px;
+	@media (max-width: $mobile) {
+		margin-bottom: 20px;
+	}
+}
+}
+.steps {
+  &__container {
+		text-align: center;
+		&> *:not(:last-child) {
+			margin-bottom: 40px;
+			@media (max-width: $mobile) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+  &__title {}
+  &__body {}
+}
+
+.sub-title {
+}
+.body-steps {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  &__card {
+		flex-grow: 0;
+		flex-shrink: 0;
+		@media (max-width: $tablet) {
+			flex-grow: unset;
+			flex-shrink: unset;
+		}
+	}
+}
+.preview-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #0D606F;
+	@media (max-width: $mobile) {
+		flex: 1 1 33.333%;
+	}
+	&_1 {
+		flex-basis: 269px;
+		@media (max-width: $tablet) {
+			flex-basis: 33.333%;
+			align-items: flex-start;
+			text-align: left;
+			& .preview-card__text {
+				max-width: 80px;
+			}
+		}
+		
+	}
+	&_2 {
+		margin-right: -71px;
+		@media (max-width: $tablet) {
+			flex-basis: 33.333%;
+			margin: 0;
+		}
+	}
+	&_3 {
+		flex-basis: 340px;
+		@media (max-width: $tablet) {
+			flex-basis: 33.333%;
+			align-items: flex-end;
+			text-align: right;;
+		}
+	}
+	&> *:not(:last-child) {
+		margin-bottom: 30px;
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+	}
+  &__image {
+		background-color: $orange;
+		width: 100px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 16px;
+		transition: background-color ease-in .3s;
+		@media (max-width: $tablet) {
+			width: 70px;
+			height: 70px;
+		}
+		&:hover {
+			background-color: grey;
+		}
+
+	}
+	&__icon {
+		width: 60px;
+		height: 52px;
+		fill: $white;
+		@media (max-width: $mobileSmall) {
+			width: 35px;
+			height: 35px;
+		}
+	}
+  &__text {
+		color: $darkblue;
+		font-family: 'Aleo-regular';
+		font-size: 20px;
+		line-height: 24px;
+		@media (max-width: $tablet) {
+			font-size: 10px;
+			line-height: 12px;
+		}
+	}
+}
+
+
+/* =====================/steps========== */
+
+/* =====================destinations========== */
+
+.main {
+  &__destinations {
+		margin-bottom: 80px;
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
+			}
+	}
+}
+.destinations {
+  &__container {
+		text-align: center;
+	}
+  &__slider {
+		margin-bottom: 41px;
+		@media (max-width: $mobile) {
+		position: relative;
+		margin-bottom: 10px;
+		}
+		
+		@media (max-width: $mobile) {
+			position: relative;
+		}
+	}
+  &__button {
+		margin: 0 auto;		
+		padding: 13.5px 32.5px;
+		position: relative;
+		transition: background-color ease-in .3s;
+		&::before {
+			content: url('data:image/svg+xml; utf8, <svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 11.5001C0.5 11.1686 0.631696 10.8507 0.866116 10.6162C1.10054 10.3818 1.41848 10.2501 1.75 10.2501H31.2325L23.365 2.38511C23.1303 2.1504 22.9984 1.83205 22.9984 1.50011C22.9984 1.16817 23.1303 0.849831 23.365 0.615114C23.5997 0.380397 23.9181 0.248535 24.25 0.248535C24.5819 0.248535 24.9003 0.380397 25.135 0.615114L35.135 10.6151C35.2514 10.7312 35.3438 10.8692 35.4068 11.021C35.4698 11.1729 35.5022 11.3357 35.5022 11.5001C35.5022 11.6645 35.4698 11.8273 35.4068 11.9792C35.3438 12.1311 35.2514 12.269 35.135 12.3851L25.135 22.3851C24.9003 22.6198 24.5819 22.7517 24.25 22.7517C23.9181 22.7517 23.5997 22.6198 23.365 22.3851C23.1303 22.1504 22.9984 21.8321 22.9984 21.5001C22.9984 21.1682 23.1303 20.8498 23.365 20.6151L31.2325 12.7501H1.75C1.41848 12.7501 1.10054 12.6184 0.866116 12.384C0.631696 12.1496 0.5 11.8316 0.5 11.5001Z" fill="white"/></svg>');
+			line-height: 0px;
+			margin-right: 12.5px;
+			@media (max-width: $mobile) {
+				content: url('data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 3C0.625 2.91712 0.657924 2.83763 0.716529 2.77903C0.775134 2.72042 0.85462 2.6875 0.9375 2.6875H8.30813L6.34125 0.721248C6.28257 0.662569 6.24961 0.582983 6.24961 0.499998C6.24961 0.417013 6.28257 0.337427 6.34125 0.278748C6.39993 0.220069 6.47952 0.187103 6.5625 0.187103C6.64548 0.187103 6.72507 0.220069 6.78375 0.278748L9.28375 2.77875C9.31285 2.80778 9.33594 2.84226 9.3517 2.88023C9.36745 2.91819 9.37556 2.95889 9.37556 3C9.37556 3.0411 9.36745 3.0818 9.3517 3.11977C9.33594 3.15773 9.31285 3.19222 9.28375 3.22125L6.78375 5.72125C6.72507 5.77993 6.64548 5.81289 6.5625 5.81289C6.47952 5.81289 6.39993 5.77993 6.34125 5.72125C6.28257 5.66257 6.24961 5.58298 6.24961 5.5C6.24961 5.41701 6.28257 5.33743 6.34125 5.27875L8.30813 3.3125H0.9375C0.85462 3.3125 0.775134 3.27957 0.716529 3.22097C0.657924 3.16236 0.625 3.08288 0.625 3V3Z" fill="white"/></svg>');
+				margin-right: 6px;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+				padding: 7.5px 12px;
+			}
+		&:hover {
+			background-color: $orange;
+		}
+	}
+}
+.steps {
+  &__title {
+		margin-bottom: 45px;
+		@media (max-width: $mobile) {
+			margin-bottom: 21px;
+		}
+	}
+}
+.sub-title {
+}
+.slider-destinations {
+	&> *:not(:last-child) {
+		@media (max-width: $mobile) {
+			margin-bottom: 16px;
+		}
+		margin-bottom: 23px;
+		
+		@media (max-width: $mobile) {
+			margin-bottom: 0;
+		}
+	}
+	
+  &__item {
+		display: flex;
+		justify-content: center;
+		width: 800px;
+		height: 800px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 16px;
+		background-image: url(img/destinations/big-sea.jpg);
+		@media (max-width: $mobile) {
+			width: 360px;
+			height: 210px;
+		}
+		& img {
+			transition: transform ease-in .5s;
+			@media (max-width: $mobile) {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&:hover {
+				transform: scale(1.1);
+			}
+			
+		}
+		
+	}
+	&__place {
+		position: absolute;
+		bottom: 40px;
+		left: 15px;
+		color: $white;
+		font: 32px / 42.34px 'RedHatText-medium';
+		text-transform: uppercase;
+		@media (max-width: $mobile) {
+			font-size: 20px;
+			line-height: 26px;
+			top: 8px;
+
+		}
+		
+	}
+}
+
+.slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 0;
+	&> *:not(:last-child) {
+		margin-right: 10px;
+		@media (max-width: $mobile) {
+			margin-right: 6px;
+		}
+	}
+	
+	@media (max-width: $mobile) {
+		position: absolute;
+		bottom: 12px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.slick-dots button {
+	font-size: 0;
+	height: 20px;
+	width: 20px;
+	background-color: rgba(242, 120, 92, 0.5);
+	border-radius: 50%;
+	&[aria-selected="true"] {
+		background-color: $orange;
+	}
+	
+	@media (max-width: $mobile) {
+		width: 8px;
+		height: 8px;
+
+	}
+}
+.slick-track {
+	&> :not(:last-child) {
+		margin-right: 60px;
+	}
+}
+
+
+/* =====================/destinations========== */
+
+/* =====================stories========== */
+
+.main {
+  &__stories {}
+}
+.stories {
+  &__top {
+		text-align: center;}
+  &__title {
+		margin-bottom: 40px;
+		@media (max-width: $mobileSmall) {
+			margin-bottom: 0;
+		}
+	}
+  &__body {}
+  &__button {
+		align-self: center;
+		padding: 13.5px 31px;
+		position: relative;
+		z-index: 5;
+		transition: background-color ease-in .3s;
+		margin: 0 auto;
+		&::before {
+			content: url('data:image/svg+xml; utf8, <svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 11.5001C0.5 11.1686 0.631696 10.8507 0.866116 10.6162C1.10054 10.3818 1.41848 10.2501 1.75 10.2501H31.2325L23.365 2.38511C23.1303 2.1504 22.9984 1.83205 22.9984 1.50011C22.9984 1.16817 23.1303 0.849831 23.365 0.615114C23.5997 0.380397 23.9181 0.248535 24.25 0.248535C24.5819 0.248535 24.9003 0.380397 25.135 0.615114L35.135 10.6151C35.2514 10.7312 35.3438 10.8692 35.4068 11.021C35.4698 11.1729 35.5022 11.3357 35.5022 11.5001C35.5022 11.6645 35.4698 11.8273 35.4068 11.9792C35.3438 12.1311 35.2514 12.269 35.135 12.3851L25.135 22.3851C24.9003 22.6198 24.5819 22.7517 24.25 22.7517C23.9181 22.7517 23.5997 22.6198 23.365 22.3851C23.1303 22.1504 22.9984 21.8321 22.9984 21.5001C22.9984 21.1682 23.1303 20.8498 23.365 20.6151L31.2325 12.7501H1.75C1.41848 12.7501 1.10054 12.6184 0.866116 12.384C0.631696 12.1496 0.5 11.8316 0.5 11.5001Z" fill="white"/></svg>');
+			line-height: 0px;
+			margin-right: 12.5px;
+			@media (max-width: $mobileSmall) {
+				content: url('data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 3C0.625 2.91712 0.657924 2.83763 0.716529 2.77903C0.775134 2.72042 0.85462 2.6875 0.9375 2.6875H8.30813L6.34125 0.721248C6.28257 0.662569 6.24961 0.582983 6.24961 0.499998C6.24961 0.417013 6.28257 0.337427 6.34125 0.278748C6.39993 0.220069 6.47952 0.187103 6.5625 0.187103C6.64548 0.187103 6.72507 0.220069 6.78375 0.278748L9.28375 2.77875C9.31285 2.80778 9.33594 2.84226 9.3517 2.88023C9.36745 2.91819 9.37556 2.95889 9.37556 3C9.37556 3.0411 9.36745 3.0818 9.3517 3.11977C9.33594 3.15773 9.31285 3.19222 9.28375 3.22125L6.78375 5.72125C6.72507 5.77993 6.64548 5.81289 6.5625 5.81289C6.47952 5.81289 6.39993 5.77993 6.34125 5.72125C6.28257 5.66257 6.24961 5.58298 6.24961 5.5C6.24961 5.41701 6.28257 5.33743 6.34125 5.27875L8.30813 3.3125H0.9375C0.85462 3.3125 0.775134 3.27957 0.716529 3.22097C0.657924 3.16236 0.625 3.08288 0.625 3V3Z" fill="white"/></svg>');
+				margin-right: 6px;
+			}
+		}
+		&:hover {
+			background-color: $orange;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 7.5px 12px;
+		}
+	}
+}
+.sub-title {
+}
+.body-stories {
+	position: relative;
+	padding: 40px 0 101px;
+	background-image: url(img/stories/mountain-big.jpg);
+	background-position: center center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	@media (max-width: $mobileSmall) {
+		padding-top: 20px;
+		padding-bottom: 93px;
+		}
+	&::after {
+		content: '';
+		background-color: rgba(255, 255, 255, .7);
+		width: 100%;
+		height: 1269px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		@media (max-width: $mobile) {
+			height: 638px;;
+		}
+
+	}
+	&__wrapper {
+
+	}
+	&__container {
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px; // посмотреть отступ после последнего
+		position: relative;
+		z-index: 5;
+		@media (max-width: $mobileSmall) {
+			gap: 15px;
+			margin-bottom: 10px;
+		}
+	}
+  &__card {}
+}
+
+.stories-card {
+	display: flex;
+	gap: 40px;
+	@media (max-width: $mobile) {
+		gap: 30px;
+	}
+	@media (max-width: $mobileSmall) {
+		gap: 10px;
+	}
+	&:hover &__image img {
+		transform: scale(1.1);
+	}
+  &__image {
+		overflow: hidden;
+		filter: drop-shadow(0px 4px 4px #0D606F);
+		border-radius: 16px;
+		& img {
+			
+		transition: transform ease-in .5s;
+		@media (max-width: $tablet) {
+			font-size: 15px;
+			line-height: 17px;
+			}
+			
+		}
+	}
+  &__body {}
+}
+.body-stories-card {
+  &__title {
+		font-family: 'Aleo-regular';
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 42px;
+		color: #0D606F;
+		margin-bottom: 24px;
+		@media (max-width: $mobile) {
+			font-size: 25px;
+			line-height: 30px;
+			margin-bottom: 11px;
+			}
+			@media (max-width: $mobileSmall) {
+				font-size: 11px;
+				line-height: 13.2px;
+				font-family: 'Aleo-bold';
+				padding-top: 5px;
+				}
+	}
+  &__text {
+		font-family: 'Aleo-regular';
+		font-size: 20px;
+		line-height: 24px;
+		color: #0D606F;
+		@media (max-width: $tablet) {
+			font-size: 15px;
+			line-height: 17px;
+			}
+			@media (max-width: $mobileSmall) {
+				font-size: 9px;
+				line-height: 10.8px;
+				display: -webkit-box;
+				-webkit-line-clamp: 8;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				margin-bottom: 2px;
+				}
+	}
+}
+.stories-card-link {
+	display: block;
+	font-family: 'Aleo-bold';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	text-decoration: underline;
+
+	color: #0D606F;
+	@media (max-width: $tablet) {
+		font-size: 15px;
+		line-height: 17px;
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: 9px;
+			line-height: 10.8px;
+			}
+
+}
+
+
+/* =====================/stories========== */
+/* import footer */
+@import "footer.scss";
+/* /import footer */
